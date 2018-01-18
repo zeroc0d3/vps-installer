@@ -1,0 +1,19 @@
+##### SET ALL CONFIG #####
+export HOST_IP='192.168.0.10'
+export HOST_NAME='zeroc0d3lab.io'
+
+export USER_NAME='ubuntu'           # Ubuntu username
+export PATH_HOME='/home/ubuntu'     # Ubuntu path home  
+
+export DEPLOY_ACCOUNT='deploy'      # Deploy username
+export DEPLOY_HOME='/home/deploy'   # Deploy path home
+
+export NVM_VERSION='8.9.4'
+export PSQL_VERSION='9.6'
+export MySQL_VERSION='5.7' 
+
+##### DEFAULT PASSWORD #####
+export PASSWORD_DEPLOY='deploy313'
+export PASSWORD_MYSQL='mysql_password'
+export PASSWORD_POSTGRESQL='psql_password'
+export PASSWORD_MONGODB='mongodb_password'
