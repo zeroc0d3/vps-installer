@@ -4,7 +4,7 @@ touch ~/.bashrc
 touch ~/.zshrc
 
 cp ./HOME/.bashrc ~/.bashrc
-cp ./HOME/.zshrc ~/.bashrc
+cp ./HOME/.zshrc ~/.zshrc
 
 cat ./config.cfg >> ~/.bashrc
 cat ./config.cfg >> ~/.zshrc
