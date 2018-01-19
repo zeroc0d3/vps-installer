@@ -74,6 +74,16 @@ setup_user() {
     echo ""    
 }
 
+check_expired_gpg(){
+    get_time
+    echo "--------------------------------------------------------------------------"
+    echo "\033[22;34m[ $DATE ] ##### Check Expired GPG: \033[0m                     " 
+    get_time
+    echo "\033[22;32m[ $DATE ]       sh ./check_expired_gpg.sh           \033[0m\n  "
+    sh ./check_expired_gpg.sh
+    echo ""  
+}
+
 configure_bash() {
     get_time
     echo "--------------------------------------------------------------------------"
@@ -190,6 +200,7 @@ main() {
   load_cfg
   install_packages
   setup_user
+  check_expired_gpg
   configure_bash
   configure_zsh
   install_memcached

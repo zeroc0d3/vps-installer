@@ -7,7 +7,7 @@ Autoinstaller script for Ubuntu 16.04 VPS (Virtual Private Server)
 * Install & Configure oh-my-zsh (with theme) 
 * Install MySQL 5.7
 * Install PostgreSQL 9.6
-* Install MongoDB 3.4
+* Install MongoDB 3.6
 * Install Memcached
 * Install Redis
 * Install NodeJS with NVM (NodeJS Version Manager)
