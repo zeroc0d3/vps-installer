@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-touch $PATH_HOME/.bashrc
-touch $PATH_HOME/.zshrc
+touch ~/.bashrc
+touch ~/.zshrc
 
-cp ./HOME/.bashrc $PATH_HOME/.bashrc
-cp ./HOME/.zshrc $PATH_HOME/.bashrc
+cp ./HOME/.bashrc ~/.bashrc
+cp ./HOME/.zshrc ~/.bashrc
 
-cat ./config.cfg >> $PATH_HOME/.bashrc
-cat ./config.cfg >> $PATH_HOME/.zshrc
+cat ./config.cfg >> ~/.bashrc
+cat ./config.cfg >> ~/.zshrc
 
-source $PATH_HOME/.profile
+source ~/.profile
