@@ -5,7 +5,7 @@ ps aux | grep -i mongod | awk {'print $2'} | sudo xargs kill -9
 
 ##### INSTALL MEMCACHED #####
 sudo apt-get -y update
-sudo apt-get -y memcached
+sudo apt-get -y install memcached
 
 ##### START MEMCACHED SERVICE #####
 sudo /etc/init.d/memcached restart
