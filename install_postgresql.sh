@@ -3,8 +3,11 @@
 ##### STOP POSTGRESQL SERVICE (if exist) #####
 ps aux | grep -i postgresql | awk {'print $2'} | sudo xargs kill -9
 
+##### REMOVE OLD SOURCE LIST POSGRESQL #####
+sudo rm -f /etc/apt/sources.list.d/pgdg.list
+
 ##### INSTALL POSTGRESQL #####
-sudo echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list
+echo "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main" | sudo tee /etc/apt/sources.list.d/pgdg.list
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | \
   sudo apt-key add -
   
