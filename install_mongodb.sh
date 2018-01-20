@@ -3,8 +3,10 @@
 ##### STOP MONGODB SERVICE (if exist) #####
 ps aux | grep -i mongod | awk {'print $2'} | sudo xargs kill -9
 
-##### REMOVA ALL PREVIOUS MONGODB #####
+##### REMOVE ALL PREVIOUS MONGODB #####
 sudo apt-get -y purge mongodb-org*
+
+##### REMOVE OLD SOURCE LIST MONGODB #####
 sudo rm -f /etc/apt/sources.list.d/mongodb-org*
 
 ##### INSTALL MONGODB #####
