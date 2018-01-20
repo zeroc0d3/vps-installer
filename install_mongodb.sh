@@ -3,6 +3,10 @@
 ##### STOP MONGODB SERVICE (if exist) #####
 ps aux | grep -i mongod | awk {'print $2'} | sudo xargs kill -9
 
+##### REMOVA ALL PREVIOUS MONGODB #####
+sudo apt-get -y purge mongodb-org*
+sudo rm -f /etc/apt/sources.list.d/mongodb-org*
+
 ##### INSTALL MONGODB #####
 ### MongoDB 3.4
 # sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
@@ -16,6 +20,15 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongod
 
 sudo apt-get -y update
 sudo apt-get -y install mongodb-org
+
+##### REINSTALL DEPENDENCIES #####
+sudo apt-get -y install libssl1.0.0 libssl-dev --reinstall
+cd /lib/x86_64-linux-gnu
+sudo ln -s libssl.so.1.0.0 libssl.so.10
+sudo ln -s libcrypto.so.1.0.0 libcrypto.so.10
+
+sudo ln -s /lib/x86_64-linux-gnu/libssl.so.1.0.0 /usr/lib/libssl.so.10
+sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.1.0.0 /usr/lib/libcrypto.so.10
 
 ##### START MONGODB SERVICE #####
 sudo mongod --fork --logpath /var/log/mongodb.log
