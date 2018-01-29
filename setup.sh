@@ -174,7 +174,7 @@ install_docker() {
     echo "" 
 }
 
-install_docker() {
+install_ruby() {
     get_time
     echo "--------------------------------------------------------------------------"
     echo "\033[22;34m[ $DATE ] ##### Install Ruby: \033[0m                          " 
