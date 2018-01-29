@@ -1,7 +1,10 @@
 #!/usr/bin/env sh
 
 ##### STOP MEMCACHED SERVICE (if exist) #####
-ps aux | grep -i mongod | awk {'print $2'} | sudo xargs kill -9
+ps aux | grep -i memcached | awk {'print $2'} | sudo xargs kill -9
+
+##### REMOVE PREVIOUS MEMCACHED #####
+sudo apt-get -y purge memcached
 
 ##### INSTALL MEMCACHED #####
 sudo apt-get -y update
