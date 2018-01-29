@@ -1,5 +1,16 @@
 #!/usr/bin/env sh
 
+##### DEFAULT VALUE (CONFIG) #####
+if [ -z "$USER_NAME" ] 
+then
+  USER_NAME='ubuntu'
+fi 
+
+if [ -z "$DEPLOY_ACCOUNT" ] 
+then
+  DEPLOY_ACCOUNT='deploy'
+fi 
+
 ##### STOP DOCKER SERVICE (if exist) #####
 ps aux | grep -i docker | awk {'print $2'} | sudo xargs kill -9
 
@@ -21,7 +32,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ##### CONFIGURE DOCKER #####
 sudo usermod -aG docker $USER_NAME
-sudo usermod -aG docker ${USER}
+# sudo usermod -aG docker ${USER}
 sudo usermod -aG docker $DEPLOY_ACCOUNT
 
 ##### START DOCKER SERVICE #####
