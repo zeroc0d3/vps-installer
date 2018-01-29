@@ -1,5 +1,11 @@
 #!/usr/bin/env sh
 
+##### DEFAULT VALUE (CONFIG) #####
+if [ -z "$PSQL_VERSION" ] 
+then
+  PSQL_VERSION='9.6'
+fi 
+
 ##### STOP POSTGRESQL SERVICE (if exist) #####
 ps aux | grep -i postgresql | awk {'print $2'} | sudo xargs kill -9
 
