@@ -1,3 +1,10 @@
+## version 1.1
+====================
+Features:
+* Install PM2
+* Check Expired GPG Key
+* Fixing Installation for mongodb, postgresql, ruby
+
 ## version 1.0
 ====================
 Features:
