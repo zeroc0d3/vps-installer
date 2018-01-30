@@ -184,6 +184,16 @@ install_ruby() {
     echo "" 
 }
 
+install_pm2() {
+    get_time
+    echo "--------------------------------------------------------------------------"
+    echo "\033[22;34m[ $DATE ] ##### Install PM2: \033[0m                           " 
+    get_time
+    echo "\033[22;32m[ $DATE ]       sh ./install_pm2.sh                \033[0m\n   "
+    sh ./install_pm2.sh
+    echo "" 
+}
+
 ### AFTER INSTALL ###
 after_install() {
     get_time
@@ -211,6 +221,7 @@ main() {
   install_nodejs
   install_docker
   install_ruby
+  install_pm2
   footer
 }
 
