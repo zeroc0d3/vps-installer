@@ -25,7 +25,7 @@ sudo chmod 770 /var/lib/redis
 
 ##### START REDIS SERVICE #####
 # sudo systemctl start redis
-redis-server --daemonize yes
+sudo redis-server --daemonize yes
 
 ##### SHOW REDIS STATUS #####
 sudo systemctl status redis
