@@ -194,4 +194,24 @@ export NVM_ROOT="$HOME/.nvm"
 if [ -d "$NVM_ROOT" ] 
 then
   [ -s "$NVM_ROOT/nvm.sh" ] && . "$NVM_ROOT/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
+
+### tmux ###
+# export TMUX_TMPDIR=~/.tmux/tmp
+
+### JAVA PATH ###
+# JAVA_HOME=/usr/lib/jvm/jdk1.8.0_121
+# JRE_HOME=/usr/lib/jvm/jdk.1.8.0_121/jre
+# PATH=$PATH:$HOME/bin:$JAVA_HOME/bin:$JRE_HOME/bin
+# export JAVA_HOME
+# export JRE_HOME
+# export PATH
+
+### GO-Lang $GOPATH ###
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+### Docker ###
+export DOCKER_CLIENT_TIMEOUT=300
+export COMPOSE_HTTP_TIMEOUT=300
