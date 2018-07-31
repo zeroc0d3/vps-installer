@@ -23,3 +23,7 @@ nvm install $NVM_VERSION
 
 ##### TEST NODEJS #####
 node -v
+
+##### SYMLINK #####
+sudo ln -sf /usr/bin/nodejs /usr/bin/node
+sudo ln -sf /usr/bin/nodejs /usr/sbin/node
