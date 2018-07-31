@@ -8,7 +8,7 @@ fi
 
 if [ -z "$NVM_VERSION" ] 
 then
-  NVM_VERSION='8.9.4'
+  NVM_VERSION='8.11.3'
 fi 
 
 ##### INSTALL NODEJS #####
@@ -27,3 +27,11 @@ node -v
 ##### SYMLINK #####
 sudo ln -sf /usr/bin/nodejs /usr/bin/node
 sudo ln -sf /usr/bin/nodejs /usr/sbin/node
+
+##### INSTALL PACKAGES #####
+nvm use $NVM_VERSION
+npm install yarn
+npm install gulp
+npm install grunt
+npm install webpack
+npm install bower
