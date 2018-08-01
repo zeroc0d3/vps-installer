@@ -13,6 +13,7 @@ Autoinstaller script for Ubuntu 16.04 VPS (Virtual Private Server)
 * Install NodeJS with NVM (NodeJS Version Manager)
 * Install Ruby 2.4.2
 * Install Docker & Docker-Compose
+* Install Python 2.7.15
 
 ## How to Run
 * Create your own config
