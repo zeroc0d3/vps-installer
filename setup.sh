@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 TITLE="VPS INSTALLATION SCRIPT"      # script name
-VER="1.0"                            # script version
+VER="2.0"                            # script version
 
 get_time() {
     DATE=`date '+%Y-%m-%d %H:%M:%S'`
@@ -144,6 +144,16 @@ install_postgresql() {
     echo "" 
 }
 
+install_python() {
+    get_time
+    echo "--------------------------------------------------------------------------"
+    echo "\033[22;34m[ $DATE ] ##### Install Python: \033[0m                    " 
+    get_time
+    echo "\033[22;32m[ $DATE ]       sh ./install_python.sh          \033[0m\n  "
+    sh ./install_python.sh
+    echo "" 
+}
+
 install_mongodb() {
     get_time
     echo "--------------------------------------------------------------------------"
@@ -222,6 +232,7 @@ main() {
   install_docker
   install_ruby
   install_pm2
+  install_python
   footer
 }
 

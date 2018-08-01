@@ -11,6 +11,7 @@ export DEPLOY_HOME='/home/deploy'   # Deploy path home
 export NVM_VERSION='8.9.4'
 export PSQL_VERSION='9.6'
 export MySQL_VERSION='5.7' 
+export PYENV_VERSION='2.7.15'
 
 ##### DEFAULT PASSWORD #####
 export PASSWORD_DEPLOY='deploy313'

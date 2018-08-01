@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-##### INSTALL RUBY #####
+##### INSTALL RUBY (Ruby Package Manager) #####
 sudo chmod 777 /opt
 
 git clone https://github.com/zeroc0d3/ruby-installation.git /opt/ruby-installation \
